@@ -1,0 +1,10 @@
+
+.DS_Store
+*.log
+.env
+.idea
+.vscode
+.buildpath
+.project
+.settings
+local.*

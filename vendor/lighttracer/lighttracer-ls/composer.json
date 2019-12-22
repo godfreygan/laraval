@@ -1,0 +1,36 @@
+{
+  "name": "lighttracer/lighttracer-ls",
+  "description": "lighttracer tool support lightservice",
+  "keywords": [
+    "trace",
+    "lightweight",
+    "zipkin",
+    "cat",
+    "opentracing"
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://gitlub.handeson.com/dev-00/lighttracer.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://gitlub.handeson.com/dev-00/lightservice.php.git"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "lighttracer/lighttracer": "^1.0.0",
+    "lightservice/lightservice": "^3.0.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "LightTracer\\Plugin\\": "src"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "config": {
+    "preferred-install": "dist"
+  }
+}

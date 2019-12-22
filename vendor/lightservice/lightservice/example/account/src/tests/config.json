@@ -1,0 +1,9 @@
+{
+  "base": {
+    "type": "http",
+    "protocol": "jsonrpc",
+    "conf": {
+      "url": "http://172.16.68.128:8080/index.php"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "saber/storage",
+    "description": "remote storage service",
+    "type": "library",
+
+    "autoload": {
+        "psr-4": {
+            "Saber\\Storage\\": "src/"
+        }
+    },
+  "require": {
+    "ext-json": "*"
+  }
+}

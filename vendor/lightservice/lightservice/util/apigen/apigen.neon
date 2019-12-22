@@ -1,0 +1,31 @@
+extensions:
+	- php
+
+exclude: null
+charset:
+	- UTF-8
+
+title: XX系统接口文档
+templateTheme: bootstrap
+groups: auto
+autocomplete:
+	- classes
+	- constants
+	- functions
+	- methods
+	- classconstants
+
+accessLevels:
+	- public
+
+sourceCode: true
+internal: false
+php: false
+tree: false
+deprecated: true
+todo: false
+download: true
+destination: ./api # path of doc generated
+source:
+	- ./module/ # path of module to generate api doc
+

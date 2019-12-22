@@ -1,0 +1,13 @@
+{
+  "name": "serverbench/process",
+  "autoload": {
+    "psr-4": {
+      "ServerBench\\Process\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "prefer-stable": true,
+  "miniumu-stability": "dev"
+}

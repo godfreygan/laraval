@@ -1,0 +1,15 @@
+{
+  "name": "lightservice/lightservice",
+  "description": "a lightweight rpc lib implementation",
+  "keywords": ["rpc", "jsonrpc", "lightweight"],
+  "require": {
+    "php": ">=5.6.0"
+  },
+  "autoload": {
+    "psr-4": {"LightService\\": "src/LightService"},
+    "files": ["src/LightService/helpers.php"]
+  },
+  "autoload-dev": {
+    "psr-4": {"LightService\\": "tests/LightService"}
+  }
+}

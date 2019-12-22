@@ -1,0 +1,91 @@
+{
+    "name": "godfrey.gan/basecode",
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/cjs-support-console.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/cjs-support-cron.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/cjs-support-lsf.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/cjs-support-redis.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/cjs-support-simple-route.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/lightservice.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/lighttracer.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/lighttracer-ls.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/storage.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/message-queue.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/events.git"
+      },
+      {
+        "type": "vcs",
+        "url": "https://github.com/godfreygan/process.git"
+      }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "monolog/monolog": "^1.16",
+        "illuminate/validation": "5.5.*",
+        "illuminate/database": "5.5.*",
+        "illuminate/events": "5.5.*",
+        "cjs/console": "dev-master",
+        "symfony/var-dumper": "^3.2",
+        "guzzlehttp/guzzle": "^6.2",
+        "webpatser/laravel-uuid": "2.*",
+        "cjs/simple-route": "dev-master",
+        "cjs/lsf":"dev-master",
+        "cjs/redis":"dev-master",
+        "serverbench/process": "dev-master",
+        "lightservice/lightservice": "dev-master",
+        "saber/storage": "dev-master",
+        "lighttracer/lighttracer-ls":"dev-master",
+        "saber/message-queue": "dev-master",
+        "saber/events":"dev-master"
+    },
+    "autoload": {
+      "psr-4": {
+        "App\\": "app/"
+      },
+      "files": [
+        "app/Util/helpers.php"
+      ]
+    },
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "config": {
+      "preferred-install": "dist"
+    },
+    "type": "project",
+    "scripts": {
+      "post-update-cmd": ["find vendor/ -name .git | xargs rm -rf"],
+      "post-install-cmd": ["find vendor/ -name .git | xargs rm -rf"]
+    }
+}

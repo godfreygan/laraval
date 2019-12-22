@@ -1,0 +1,79 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "382ec1d4d694ee117f4bd25587b34044",
+    "packages": [
+        {
+            "name": "lightservice/lightservice",
+            "version": "v3.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://gitlub.handeson.com/dev-00/lightservice.php.git",
+                "reference": "1f17043dede09f88e6374062404135fc2a42e865"
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LightService\\": "src/LightService"
+                },
+                "files": [
+                    "src/LightService/helpers.php"
+                ]
+            },
+            "description": "a lightweight rpc lib implementation",
+            "keywords": [
+                "jsonrpc",
+                "lightweight",
+                "rpc"
+            ],
+            "time": "2019-06-04T03:05:11+00:00"
+        },
+        {
+            "name": "lighttracer/lighttracer",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://gitlub.handeson.com/dev-00/lighttracer.git",
+                "reference": "71423300a3507db66bb8df459c2169fe4d4b4982"
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LightTracer\\": "src"
+                },
+                "files": [
+                    "src/helper.php",
+                    "src/flakeid.php"
+                ]
+            },
+            "description": "lightweight tracer tool support export to zipkin, cat , es etc.",
+            "keywords": [
+                "lightweight",
+                "trace"
+            ],
+            "time": "2019-06-03T03:06:30+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.0.0"
+    },
+    "platform-dev": []
+}
