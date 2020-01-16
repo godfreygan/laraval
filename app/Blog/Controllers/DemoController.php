@@ -4,11 +4,23 @@ namespace App\Blog\Controllers;
 
 use App\Blog\Library\Exceptions\ServiceException;
 use App\Blog\Library\Util\DBUtil;
+use App\Blog\Modules\Queue\Kafka\KafkaResend;
 use CjsRedis\Sequence;
 use App\Util\ValidatorUtil;
 
+/**
+ * Class DemoController
+ * @package App\Blog\Controllers
+ * @remark  此文件仅可用于开发环境、测试环境。禁止生产环境调用。
+ */
 class DemoController extends Base
 {
+    public function __construct()
+    {
+        parent::__construct();
+        parent::denyProductionExec();   //  禁止生产环境执行
+    }
+
     public function getSeqAction()
     {
         $user_id = '0005000391';

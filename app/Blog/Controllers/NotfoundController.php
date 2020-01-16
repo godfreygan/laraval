@@ -12,15 +12,12 @@ class NotfoundController extends Base
 {
 
     /**
-     * 404 地址
-     * todo待完善
      * @OA\Get(
-     *     path="/rpc.php?notfound_index",
+     *     path="/index.php?notfound_index",
      *     tags={"other"},
      *     summary="404接口地址返回",
      *     operationId = "notfound_index",
-     *     description="
-    找不到的接口地址统一返回 ",
+     *     description="找不到的接口地址统一返回 ",
      *     @OA\Response(
      *         response="200",
      *         description="successful operation",
