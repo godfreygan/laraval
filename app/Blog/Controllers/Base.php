@@ -2,6 +2,7 @@
 
 namespace App\Blog\Controllers;
 
+use App\Blog\Library\Enum\ExceptionCodeEnum;
 use App\Blog\Library\Exceptions\ServiceException;
 use Log;
 
@@ -88,21 +89,21 @@ abstract class Base
      * @param array $message option rpc校验错误信息
      * @param boolean $filter option 是否过滤多余参数
      * @param string $method option 调用入口
-     * @return array 请求的业务参数
-     *
+     * @param boolean $isWriteLog 是否需要写日志
      * @throws ServiceException
-     * @author chengjinsheng
-     * @date 2016-10-11
+     * @return array 请求的业务参数
      */
-    protected function validate($param, $rules, $message = [], $filter = true, $method = '')
+    protected function validate($param, $rules, $message = [], $filter = true, $method = '',$isWriteLog = true)
     {
         $validator = \Validator::make($param, $rules, $message);
         if ($validator->fails()) {
             $aError = $validator->messages()->toArray();
-            Log::debug($method . ' 请求参数校验失败', ['params' => $param, 'result' => $aError]);
+            if($isWriteLog){
+                Log::debug($method.' 请求参数校验失败', ['params' => $param, 'result' => $aError]);
+            }
             foreach ($aError as $field => $error) { //获取第一个错误信息
                 $msg = array_get($error, 0, '');
-                if (strpos($msg, 'validation.') === 0) {
+                if (strpos($msg, 'validation.')===0) {
                     $msg = sprintf('%s.%s', $field, $msg);
                 }
                 break;
@@ -110,10 +111,12 @@ abstract class Base
             if (ServiceException::code($msg)) {
                 throw new ServiceException($msg);
             } else {
-                throw new ServiceException($msg, '99000001');
+                throw new ServiceException($msg, ExceptionCodeEnum::INVALID_ARGUMENT);
             }
         }
-        Log::debug($method . ' 请求参数校验', ['params' => $param]);
+        if($isWriteLog) {
+            Log::debug($method.' 请求参数校验', ['params' => $param]);
+        }
         if ($filter) {
             $data = [];
             foreach ($rules as $key => $val) {
@@ -238,7 +241,7 @@ abstract class Base
     protected function onlyDevOpen()
     {
         if (env('APP_ENV', 'production') != 'dev') {
-            throw new ServiceException('api_only_dev_open');
+            throw new ServiceException('API_ONLY_DEV_OPEN');
         }
     }
 
@@ -258,7 +261,7 @@ abstract class Base
     protected function denyProductionExec()
     {
         if (env('APP_ENV', 'production') == 'production') {
-            throw new ServiceException('api_deny_production_exec');
+            throw new ServiceException('API_DENY_PRODUCTION_EXEC');
         }
     }
 

@@ -24,7 +24,7 @@ class DbExceptionHandler implements DebugExceptionHandler
     public function report(Exception $e)
     {
         Log::error(__METHOD__, ['ExceptionCode' => $e->getCode(), 'ExceptionMessage' => $e->getMessage()]);
-        throw new ServiceException("database_exception");
+        throw new ServiceException("DATABASE_EXCEPTION");
     }
 
     /**
@@ -37,7 +37,7 @@ class DbExceptionHandler implements DebugExceptionHandler
     public function render($request, Exception $e)
     {
         Log::error(__METHOD__, ['ExceptionCode' => $e->getCode(), 'ExceptionMessage' => $e->getMessage()]);
-        throw new ServiceException("database_exception");
+        throw new ServiceException("DATABASE_EXCEPTION");
     }
 
     /**
@@ -50,6 +50,6 @@ class DbExceptionHandler implements DebugExceptionHandler
     public function renderForConsole($output, Exception $e)
     {
         Log::error(__METHOD__, ['ExceptionCode' => $e->getCode(), 'ExceptionMessage' => $e->getMessage()]);
-        throw new ServiceException("database_exception");
+        throw new ServiceException("DATABASE_EXCEPTION");
     }
 }

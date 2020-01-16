@@ -30,7 +30,7 @@ $res = $routeObj->run(function($me){
                 unset($uriPath[0]);
             }
         } else { // blog/v1/blog/info 或 v1/blog/info
-            $tmp = \HdsCommon\CommonFunc::parserPath($uriPath, 'blog');
+            $tmp = parserPath($uriPath, 'blog');
             $ret['className'] = sprintf('%s%sController', $me->getAppCtlNamespace(),$tmp['controller']);
             $ret['method'] =  $tmp['function'] . 'Action';
 

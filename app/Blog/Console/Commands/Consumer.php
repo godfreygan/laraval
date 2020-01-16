@@ -59,7 +59,7 @@ class Consumer extends Command
             if (in_array($queueType, ['kafka', 'redis'])) {
                 $this->info("queue_type: {$queueType}");
 
-                $className = "\App\Blog\Modules\Queue\\" . ucfirst($queueType) . "\\" . \HdsCommon\CommonFunc::parseName($queueName, 2);
+                $className = "\App\Blog\Modules\Queue\\" . ucfirst($queueType) . "\\" . parseName($queueName, 2);
                 if (class_exists($className)) {
                     $queueObj = new $className;
                     $queueObj->receive(); //接收队列数据并处理
