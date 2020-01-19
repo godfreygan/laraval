@@ -4,18 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f91c12076773ed610b734dd67af65027",
+    "content-hash": "9b2736f9c30045f273c78d0bf1d59f90",
     "packages": [
         {
             "name": "cjs/console",
-            "version": "1.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/cjs-support-console.git",
                 "reference": "ec055cf3a993c5ffbecb72d980f8fefe184bf0e1"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/cjs-support-console/zipball/ec055cf3a993c5ffbecb72d980f8fefe184bf0e1",
+                "reference": "ec055cf3a993c5ffbecb72d980f8fefe184bf0e1",
+                "shasum": ""
+            },
             "require": {
-                "cjs/cron": "^1.0.0",
+                "cjs/cron": "*",
                 "php": ">=5.4.0"
             },
             "type": "library",
@@ -60,6 +66,12 @@
                 "url": "https://github.com/godfreygan/cjs-support-lsf.git",
                 "reference": "e1389166c021aecc4d3ae0f9cd7ab57d4a79374b"
             },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/cjs-support-lsf/zipball/e1389166c021aecc4d3ae0f9cd7ab57d4a79374b",
+                "reference": "e1389166c021aecc4d3ae0f9cd7ab57d4a79374b",
+                "shasum": ""
+            },
             "require": {
                 "php": ">=5.4.0",
                 "php-di/php-di": "^5.0"
@@ -80,11 +92,17 @@
         },
         {
             "name": "cjs/redis",
-            "version": "1.0.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/cjs-support-redis.git",
-                "reference": "33cb8f7c673c2c11f9b7dca18c63677e61967b48"
+                "reference": "b8e62ca4f998014b499336a7f09dc69c27314644"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/cjs-support-redis/zipball/b8e62ca4f998014b499336a7f09dc69c27314644",
+                "reference": "b8e62ca4f998014b499336a7f09dc69c27314644",
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
@@ -96,15 +114,28 @@
                 },
                 "files": []
             },
-            "time": "2019-12-22T11:32:27+00:00"
+            "autoload-dev": {
+                "psr-4": []
+            },
+            "support": {
+                "source": "https://github.com/godfreygan/cjs-support-redis/tree/master",
+                "issues": "https://github.com/godfreygan/cjs-support-redis/issues"
+            },
+            "time": "2020-01-18T07:20:39+00:00"
         },
         {
             "name": "cjs/simple-route",
-            "version": "1.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/cjs-support-simple-route.git",
                 "reference": "43df587475a299fa49245071e4269b7479fe353e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/cjs-support-simple-route/zipball/43df587475a299fa49245071e4269b7479fe353e",
+                "reference": "43df587475a299fa49245071e4269b7479fe353e",
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
@@ -933,11 +964,17 @@
         },
         {
             "name": "lightservice/lightservice",
-            "version": "v3.0.10",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/lightservice.git",
                 "reference": "b65f6dc4a2b3cfe44544eea1c35384511e8f34c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/lightservice/zipball/b65f6dc4a2b3cfe44544eea1c35384511e8f34c9",
+                "reference": "b65f6dc4a2b3cfe44544eea1c35384511e8f34c9",
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.6.0"
@@ -997,15 +1034,21 @@
         },
         {
             "name": "lighttracer/lighttracer-ls",
-            "version": "v1.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/lighttracer-ls.git",
-                "reference": "3e8790f87c12a03f1e5130f2d05e9dcb4c0d01e0"
+                "reference": "463550bfb22172caa924c2b93b0f981e15b2f76c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/lighttracer-ls/zipball/339d9df9fd28bf446432237be427ec34e8c9f368",
+                "reference": "339d9df9fd28bf446432237be427ec34e8c9f368",
+                "shasum": ""
             },
             "require": {
-                "lightservice/lightservice": "^3.0.4",
-                "lighttracer/lighttracer": "^1.0.0",
+                "lightservice/lightservice": "*",
+                "lighttracer/lighttracer": "*",
                 "php": ">=7.0.0"
             },
             "type": "library",
@@ -1022,7 +1065,7 @@
                 "trace",
                 "zipkin"
             ],
-            "time": "2019-12-22T10:59:35+00:00"
+            "time": "2020-01-19T08:35:38+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1653,11 +1696,17 @@
         },
         {
             "name": "saber/events",
-            "version": "v1.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/events.git",
                 "reference": "2845d04ad865f59fcc100270b1ccef442e959e7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/events/zipball/2845d04ad865f59fcc100270b1ccef442e959e7a",
+                "reference": "2845d04ad865f59fcc100270b1ccef442e959e7a",
+                "shasum": ""
             },
             "require": {
                 "ext-json": "*",
@@ -1674,11 +1723,17 @@
         },
         {
             "name": "saber/message-queue",
-            "version": "2.0.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/message-queue.git",
                 "reference": "3c6eb30d75b82fdb590575c51862c64d5c030d0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/message-queue/zipball/3c6eb30d75b82fdb590575c51862c64d5c030d0d",
+                "reference": "3c6eb30d75b82fdb590575c51862c64d5c030d0d",
+                "shasum": ""
             },
             "require": {
                 "ext-rdkafka": ">=1.0.0",
@@ -1695,11 +1750,17 @@
         },
         {
             "name": "saber/storage",
-            "version": "1.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/storage.git",
                 "reference": "a2b32fffce4acf2d6c54c75eddd6931fb267ce85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/storage/zipball/a2b32fffce4acf2d6c54c75eddd6931fb267ce85",
+                "reference": "a2b32fffce4acf2d6c54c75eddd6931fb267ce85",
+                "shasum": ""
             },
             "require": {
                 "ext-json": "*"
@@ -1715,11 +1776,17 @@
         },
         {
             "name": "serverbench/process",
-            "version": "v0.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/process.git",
                 "reference": "a489c6826a50d53a68dca65337106e8fb0d7aa2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/godfreygan/process/zipball/a489c6826a50d53a68dca65337106e8fb0d7aa2c",
+                "reference": "a489c6826a50d53a68dca65337106e8fb0d7aa2c",
+                "shasum": ""
             },
             "type": "library",
             "autoload": {
@@ -2262,7 +2329,16 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "cjs/lsf": 20
+        "cjs/console": 20,
+        "cjs/simple-route": 20,
+        "cjs/lsf": 20,
+        "cjs/redis": 20,
+        "serverbench/process": 20,
+        "lightservice/lightservice": 20,
+        "lighttracer/lighttracer-ls": 20,
+        "saber/storage": 20,
+        "saber/message-queue": 20,
+        "saber/events": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

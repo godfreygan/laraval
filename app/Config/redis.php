@@ -13,7 +13,7 @@ return array(
         'port'     => env('BLOG_REDIS_PORT', 6379),
         'database' => env('BLOG_REDIS_DATABASE', 9),
         'password' => env('BLOG_REDIS_PASSWORD', ''),
-        'prefix'   => env('APP_NAME', 'user') .':bog:',
+        'prefix'   => env('APP_NAME', 'user') .':blog:',
         'desc'     => '博客相关'
     ),
     'dict'         => array(
