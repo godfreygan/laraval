@@ -4,16 +4,31 @@ namespace App\Blog\Controllers;
 
 use App\Blog\Library\Enum\ExceptionCodeEnum;
 use App\Blog\Library\Exceptions\ServiceException;
+use CjsLsf\Core\App;
 use Log;
 
 abstract class Base
 {
 
     const STATUS_SUCCESS = 0;
+    private $view_path = '';        // views根路径
+    private $data = array();        // 页面传递数据
 
     public function __construct()
     {
+        $this->view_path = App::appPath() . '/' . getModuleName() . '/Views/';
+    }
 
+    public function display($file)
+    {
+        extract($this->data);
+        $filePath = $this->view_path . $file;
+        include $filePath;
+    }
+
+    public function assign($key, $value)
+    {
+        $this->data[$key] = $value;
     }
 
     /**
