@@ -52,6 +52,9 @@
     ],
     "require": {
         "php": ">=7.0",
+        "fideloper/proxy": "^4.0",
+        "laravel/framework": "^6.2",
+        "laravel/tinker": "^2.0",
         "monolog/monolog": "^1.16",
         "illuminate/validation": "5.5.*",
         "illuminate/database": "5.5.*",
@@ -69,6 +72,13 @@
         "saber/storage": "dev-master",
         "saber/message-queue": "dev-master",
         "saber/events":"dev-master"
+    },
+    "require-dev": {
+        "facade/ignition": "^1.4",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^3.0",
+        "phpunit/phpunit": "^8.0"
     },
     "autoload": {
       "psr-4": {
