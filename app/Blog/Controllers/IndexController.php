@@ -8,30 +8,12 @@ use CjsRedis\Redis;
 use App\Blog\Library\Exceptions\ServiceException;
 use App\Blog\Library\Enum\ExceptionCodeEnum;
 
-class IndexController extends BaseController
+class IndexController extends Base
 {
 
     public function indexAction()
     {
         return $this->responseSuccess(['tips' => 'web服务正常'], __METHOD__);
-    }
-
-    public function errorAction($heading = '', $message = '')
-    {
-        $heading = empty($heading) ? "Error" : $heading;
-        $message = empty($message) ? "Sorry, There is a fatal error. Please contact the administrator ！" : $message;
-        $this->assign('heading', $heading);
-        $this->assign('message', $message);
-        $this->display('Index/error_general.html');
-    }
-
-    public function error404Action($heading = '', $message = '')
-    {
-        $heading = empty($heading) ? "404" : $heading;
-        $message = empty($message) ? "Not found ！" : $message;
-        $this->assign('heading', $heading);
-        $this->assign('message', $message);
-        $this->display('Index/error_404.html');
     }
 
     /**

@@ -13,19 +13,12 @@ use App\Util\ValidatorUtil;
  * @package App\Blog\Controllers
  * @remark  此文件仅可用于开发环境、测试环境。禁止生产环境调用。
  */
-class DemoController extends BaseController
+class DemoController extends Base
 {
     public function __construct()
     {
         parent::__construct();
         parent::denyProductionExec();   //  禁止生产环境执行
-    }
-
-    public function displayAction()
-    {
-        $this->assign('a', 1981);
-        $this->assign('b', 888);
-        $this->display('Demo/index.html');
     }
 
     public function getSeqAction()
