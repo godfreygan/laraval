@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/godfreygan/cjs-support-console.git",
-                "reference": "ec055cf3a993c5ffbecb72d980f8fefe184bf0e1"
+                "reference": "e5aff949ba55e4967c8b9ec73d1ed3a6c2e7ade8"
             },
             "require": {
                 "cjs/cron": "*",
@@ -28,7 +28,7 @@
                     "CjsConsole\\": "src/"
                 }
             },
-            "time": "2019-12-22T11:22:16+00:00"
+            "time": "2020-01-23T05:54:33+00:00"
         },
         {
             "name": "cjs/cron",
