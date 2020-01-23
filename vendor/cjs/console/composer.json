@@ -1,0 +1,18 @@
+{
+  "name": "cjs/console",
+  "require": {
+    "php": ">=5.4.0",
+    "cjs/cron": "^1.0.0"
+  },
+  "autoload": {
+    "classmap": [
+
+    ],
+    "files": [
+      "src/Helper.php"
+    ],
+    "psr-4": {
+      "CjsConsole\\": "src/"
+    }
+  }
+}

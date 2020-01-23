@@ -1,0 +1,36 @@
+{
+  "name": "lighttracer/lighttracer-ls",
+  "description": "lighttracer tool support lightservice",
+  "keywords": [
+    "trace",
+    "lightweight",
+    "zipkin",
+    "cat",
+    "opentracing"
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/godfreygan/lighttracer.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/godfreygan/lightservice.git"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "lighttracer/lighttracer": "dev-master",
+    "lightservice/lightservice": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "LightTracer\\Plugin\\": "src"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "config": {
+    "preferred-install": "dist"
+  }
+}
