@@ -2,7 +2,7 @@
   "name": "cjs/console",
   "require": {
     "php": ">=5.4.0",
-    "cjs/cron": "^1.0.0"
+    "cjs/cron": "*"
   },
   "autoload": {
     "classmap": [
